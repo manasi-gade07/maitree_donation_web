@@ -24,6 +24,12 @@ This website provides a user-friendly interface for processing payments securely
   
 - **Razorpay API:** Facilitates communication with the Razorpay payment gateway.
 
+ 
+ ## Web Preview
+
+![Website Preview](https://github.com/manasi-gade07/maitree_donation_web/blob/ad9c239f983c68ce344ba412e7c0814b804240c3/webpreview?raw=true)
+
+
 ## 🚀 Usage
 
 1. **Clone the Repository:**
