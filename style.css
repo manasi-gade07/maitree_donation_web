@@ -344,7 +344,8 @@ textarea {
     
     .navbar {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space between;
+        
         gap: 15px;
         height: auto;
         padding: 10px 20px;
@@ -371,7 +372,7 @@ textarea {
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         gap: 15px;
         height: auto;
         padding: 10px 20px;
@@ -409,7 +410,7 @@ textarea {
 @media (max-width: 480px) {
     .navbar {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         gap: 10px;
         height: auto;
         padding: 10px;
