@@ -9,18 +9,24 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 1px;
     background-color: white;
     height: 50px;
     width: 100%;
     position: fixed;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    flex-wrap: wrap;
 }
 
 /* Name Section */
 .name {
     padding-top: 10px;
-    margin-left: 25px;
     display: flex;
+    align-items: center;
 }
 
 /* Link and Button Hover Effects */
@@ -331,22 +337,17 @@ textarea {
 }
 
 /* Responsive Design */
-
-/* Extra Large Screens (1440px and above) */
-@media (min-width: 1440px) {
-    .container {
-        max-width: 1320px;
-    }
-
-    .im2 img, .im3 img {
-        width: 450px;
-    }
-}
-
-/* Large Screens (max-width: 1200px) */
 @media (max-width: 1200px) {
     .container {
         max-width: 100%;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        padding: 10px 20px;
     }
 
     .sec1 img {
@@ -367,8 +368,15 @@ textarea {
     }
 }
 
-/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        padding: 10px 20px;
+    }
+
     .name {
         margin-left: 0;
     }
@@ -398,8 +406,15 @@ textarea {
     }
 }
 
-/* Phones (max-width: 480px) */
 @media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+        padding: 10px;
+    }
+
     .sec1 h2 {
         font-size: 2rem;
     }
@@ -424,43 +439,5 @@ textarea {
 
     .card img {
         width: 100%;
-    }
-}
-
-/* Small Phones (max-width: 360px) */
-@media (max-width: 360px) {
-    .sec1 h2 {
-        font-size: 1.5rem;
-    }
-
-    .sec1 p {
-        font-size: 0.95rem;
-        line-height: 25px;
-    }
-
-    .sub input {
-        width: 95%;
-    }
-
-    button {
-        width: 90px;
-        font-size: 0.9rem;
-    }
-
-    .info2 {
-        padding: 20px;
-        margin-right: 20px;
-    }
-}
-
-/* Always keep navbar horizontal */
-@media (max-width: 1200px), 
-       (max-width: 768px), 
-       (max-width: 480px), 
-       (max-width: 360px) {
-    .navbar {
-        flex-direction: row !important;
-        align-items: center !important;
-        height: 50px !important;
     }
 }
