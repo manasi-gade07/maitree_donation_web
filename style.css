@@ -331,6 +331,19 @@ textarea {
 }
 
 /* Responsive Design */
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .im2 img, .im3 img {
+        width: 450px;
+    }
+}
+
+/* Large Screens (max-width: 1200px) */
 @media (max-width: 1200px) {
     .container {
         max-width: 100%;
@@ -360,6 +373,7 @@ textarea {
     }
 }
 
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -396,6 +410,7 @@ textarea {
     }
 }
 
+/* Phones (max-width: 480px) */
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
@@ -427,5 +442,31 @@ textarea {
 
     .card img {
         width: 100%;
+    }
+}
+
+/* Small Phones (max-width: 360px) */
+@media (max-width: 360px) {
+    .sec1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .sec1 p {
+        font-size: 0.95rem;
+        line-height: 25px;
+    }
+
+    .sub input {
+        width: 95%;
+    }
+
+    button {
+        width: 90px;
+        font-size: 0.9rem;
+    }
+
+    .info2 {
+        padding: 20px;
+        margin-right: 20px;
     }
 }
