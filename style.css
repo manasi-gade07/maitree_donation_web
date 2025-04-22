@@ -10,9 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 1px;
     background-color: white;
-    height: 50px;
+    height: 60px;
     width: 100%;
     position: fixed;
     padding: 0 20px;
@@ -29,44 +28,50 @@
     align-items: center;
 }
 
-/* Link and Button Hover Effects */
-a:hover {
-    color: blue;
-}
-
-button:hover {
-    background-color: #ffffff;
-    color: blue;
-}
-
-/* Image & Content Styles */
 #women {
     height: 30px;
+    margin-left: 10px;
 }
 
+#openPanel {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Nav Links */
 .head {
     display: flex;
     gap: 30px;
     align-items: center;
     margin-right: 40px;
+    transition: all 0.3s ease;
 }
 
-/* Link Styles */
 a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-/* Button Styles */
 button {
     background-color: blue;
-    border: transparent;
+    border: none;
     color: white;
     width: 100px;
     font-weight: bold;
-    padding: 7px 7px;
+    padding: 7px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: blue;
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
 }
 
 /* Container */
@@ -95,7 +100,7 @@ button {
 }
 
 .sec1 h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .sec1 p {
@@ -337,108 +342,118 @@ textarea {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 100%;
-    }
-    
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: space between;
-        
-        gap: 15px;
-        height: auto;
-        padding: 10px 20px;
-    }
 
-    .sec1 img {
-        width: 300px;
-        margin-left: 20px;
+/* Mobile (0 - 600px) */
+@media (max-width: 768px) {
+    #openPanel {
+        display: block;
     }
 
     .head {
+        display: none;
         flex-direction: column;
-    }
-
-    .sec2, .sec3, .sec4 {
-        margin-top: 50px;
-    }
-
-    .start, .sub {
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 15px;
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    .name {
-        margin-left: 0;
-    }
-
-    .sec1 img, .im2 img, .im3 img {
-        width: 250px;
-        margin-left: 0;
-    }
-
-    .card {
-        margin-top: 30px;
-        margin-left: 0;
+        background-color: white;
         width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-top: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        overflow-y: auto;
+        max-height: 70vh;
+        z-index: 998;
     }
 
-    .container {
-        max-width: 90%;
+    .head.active {
+        display: flex;
     }
 
-    .flex {
-        flex-direction: column;
-        align-items: center;
+    .head a,
+    .head button {
+        margin: 10px 0;
     }
 
-    .sub input {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
     .navbar {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
+        flex-direction: column;
         height: auto;
-        padding: 10px;
-    }
-
-    .sec1 h2 {
-        font-size: 2rem;
-    }
-
-    .sec1 p {
-        font-size: 1rem;
         text-align: center;
     }
 
-    .sec2, .sec3 {
-        margin-top: 30px;
+    .im2 img,
+    .im3 img,
+    .card img {
+        width: 90%;
+        margin: 20px auto;
     }
 
-    .im2 img, .im3 img {
-        width: 100%;
-        margin-top: 20px;
+    .flex,
+    .feature-card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .container,
+    .info2 {
+        padding: 15px;
+        margin-inline: 10px;
     }
 
     .sub input {
         width: 90%;
     }
 
-    .card img {
-        width: 100%;
+    .r2 {
+        max-width: 100%;
+    }
+
+    .info2 {
+        margin: 20px auto;
+    }
+
+    .t {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .me {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Tablet (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .head {
+        gap: 20px;
+        margin-right: 20px;
+    }
+
+    .im2 img,
+    .im3 img {
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    .feature-card {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .info2 {
+        margin: 50px auto;
+    }
+
+    .sub input {
+        width: 60%;
     }
 }
